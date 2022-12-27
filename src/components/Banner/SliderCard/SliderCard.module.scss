@@ -1,0 +1,40 @@
+.card{
+  width: 320px;
+  margin-top: 50px;
+  .card_title{
+    text-align: center;
+    h1{
+      font-weight: 300;
+      color: #000;
+    }
+  }
+  .card_image{
+    img{
+      width: 100%;
+    }
+  }
+  .card_footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    p{
+      font-size: 30px;
+      font-weight: 300;
+      color: #27160e;
+    }
+    button{
+      height: 50px;
+      width: 150px;
+      background-color: #543019;
+      font-size: 18px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      span{
+        margin-right: 10px;
+        font-size: 24px;
+      }
+    }
+  }
+}

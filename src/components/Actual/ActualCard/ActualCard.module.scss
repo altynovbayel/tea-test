@@ -1,0 +1,54 @@
+.actual_card{
+  width: 370px;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #E1E1E1;
+  padding: 25px;
+  margin-bottom: 10px;
+  @media (max-width: 1024px){
+    width: 492px;
+  }
+  @media (max-width: 768px) {
+    width: 364px;
+  }
+  @media (max-width: 425px) {
+    width: 100%;
+  }
+  .card_img{
+    width: 45%;
+    img{
+      width: 100%;
+      transform: scale(1.2);
+    }
+  }
+  .card_info{
+    width: 45%;
+    h3{
+      color: #27160e;
+      font-size: 20px;
+      line-height: 25px;
+      font-weight: 300;
+      margin-bottom: 20px;
+    }
+    .category{
+      color: #A5A5A5;
+      font-size: 15px;
+      line-height: 17px;
+      font-style: italic;
+    }
+    p{
+      color: #27160e;
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 25px;
+      margin-top: 20px;
+    }
+    .card_icons{
+      color: #27160e;
+      .favorite_btn{
+        background: transparent;
+        font-size: 24px;
+      }
+    }
+  }
+}
