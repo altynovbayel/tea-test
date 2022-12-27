@@ -2,7 +2,6 @@ import React from 'react';
 import c from './Banner.module.scss'
 import {facts_list, sliderCard, sliderImg} from "../../utils/list";
 import SliderCard from "./SliderCard";
-import SwipeableViews from "react-swipeable-views";
 import PaginationCard from './Pagination'
 import {Swiper, SwiperSlide} from "swiper/react";
 import {Autoplay, Pagination, EffectFade} from "swiper";
@@ -10,12 +9,10 @@ import {Autoplay, Pagination, EffectFade} from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
+import CardSlider from "./CardSlider";
 
 function Banner() {
-  const [id, setId] = React.useState(1)
-  const handleChangeID = index => {
-    setId(index)
-  }
+  
   return (
     <div className={c.banner}>
       <div className={c.banner_slider}>
@@ -49,22 +46,23 @@ function Banner() {
             }
           </Swiper>
         </div>
-        <div className={c.slider_card}>
-          <SwipeableViews
-            enableMouseEvents
-            index={id}
-            onChangeIndex={handleChangeID}
-          >
-            {
-              sliderCard.map(item => {
-                return (
-                  <SliderCard key={item.id} {...item}/>
-                )
-              })
-            }
-          </SwipeableViews>
-          <PaginationCard id={id} setId={setId} count={sliderCard.length}/>
-        </div>
+        <CardSlider/>
+        {/*<div className={c.slider_card}>*/}
+        {/*  <SwipeableViews*/}
+        {/*    enableMouseEvents*/}
+        {/*    index={id}*/}
+        {/*    onChangeIndex={handleChangeID}*/}
+        {/*  >*/}
+        {/*    {*/}
+        {/*      sliderCard.map(item => {*/}
+        {/*        return (*/}
+        {/*          <SliderCard key={item.id} {...item}/>*/}
+        {/*        )*/}
+        {/*      })*/}
+        {/*    }*/}
+        {/*  </SwipeableViews>*/}
+        {/*  <PaginationCard id={id} setId={setId} count={sliderCard.length}/>*/}
+        {/*</div>*/}
       </div>
       <div className={c.facts_text}>
         {
