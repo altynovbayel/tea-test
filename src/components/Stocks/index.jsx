@@ -33,34 +33,40 @@ function Stocks() {
           }}
           modules={[Pagination, Autoplay]}
           breakpoints={{
+            320: {
+              slidesPerView: 1,
+              slidesPerGroup: 1,
+              spaceBetween: 20,
+            },
+            375: {
+              slidesPerView: 1,
+              slidesPerGroup: 1,
+              spaceBetween: 20,
+            },
+            425: {
+              slidesPerView: 1,
+              slidesPerGroup: 1,
+              spaceBetween: 20,
+            },
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 2,
+              slidesPerGroup: 2,
+              spaceBetween: 30,
+            },
             1024: {
-              width: 1024,
               slidesPerView: 3,
               slidesPerGroup: 3,
               spaceBetween: 30,
             },
-            768: {
-              width: 768,
-              slidesPerView: 2,
-              slidesPerGroup: 2,
-              spaceBetween: 20,
-            },
-            
-            375: {
-              width: 375,
-              slidesPerView: 1,
-              slidesPerGroup: 1,
-            },
-            320: {
-              width: 320,
-              slidesPerView: 1,
-              slidesPerGroup: 1,
-            }
           }}
         >
           {
             stockCards.map(item => (
-              <SwiperSlide key={item.id}>
+              <SwiperSlide key={item.id} className={c.every_swiper}>
                 <StockCard  {...item}/>
               </SwiperSlide>
             ))

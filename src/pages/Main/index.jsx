@@ -16,7 +16,7 @@ function Main() {
       <Banner/>
       <Actual/>
       <Stocks/>
-      <TeaSelections/>
+      {/*<TeaSelections/>*/}
       {/*<Services/>*/}
       <News/>
       <Form/>
